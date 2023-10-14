@@ -1,0 +1,197 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+.frameContacto{
+    background-color: v.$negro;
+    overflow-y: auto;
+    padding: 0 ;
+
+ 
+    .contenedor{
+        background: white;
+        
+        
+        flex-direction: column;
+        @include m.desktop{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0 auto;
+        }
+        
+        gap: 2rem;
+        width: 95%;
+        height: auto;
+        @include m.desktop{
+            
+            width: 90%;
+        }
+    }
+}
+.frameContactoSuperior{
+    width: 100%;
+    background: v.$blanco;
+    margin-bottom: 1rem;
+    @include m.desktop{
+        height: 14.4rem;
+
+    
+    }
+    
+    h3{
+        font-size: 5rem;
+        font-weight: 700;
+        color: v.$negro;
+        @include m.desktop{
+            font-size: 8rem;
+        }
+    }
+}
+.frameContactoInferior{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    @include m.desktop{
+        height: calc(100% - 14.4rem);
+    }
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+.contenedorInfoContacto{
+    display: flex;
+    width: 100%;
+    padding: 0 2rem;
+    gap: 2rem;
+    flex-direction: column-reverse;
+
+    @include m.desktop{
+        flex-direction: row;
+        
+    }
+    .infoContacto{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+  
+        p{
+            color: v.$negro;
+        }
+        .contenedorBtnRegresar{
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            .btnRegresar{
+                width: 60%;
+            }
+        }
+        .instanciaContacto{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 1rem;
+            flex-direction: column;
+            
+            @include m.desktop{
+                flex-direction: row;
+            }
+            .instanciaContactoIzquierda{
+                @include m.desktop{
+                    flex: 1.5;
+                    font-size: 3.5rem;
+                }
+                
+                display: flex;
+            
+                justify-content: end;
+                
+                font-size: 3rem;
+                font-weight: 700;
+                &:hover{
+                    
+                    cursor: pointer;
+                    + .instanciaContactoDerecha{
+                        background-position: 0% 0; /* Al hacer hover, el fondo se desplaza completamente a la derecha */
+                        transition: background-position .8s;
+                        
+                    }
+                }
+            }
+            .instanciaContactoDerecha{
+                
+                @include m.desktop{
+                    flex: 3;
+                    font-size: 3rem;
+                }
+                
+                font-size: 2rem;
+                background-image: linear-gradient(to left, transparent 0%, transparent 50%, v.$verde 50%, v.$verde 100%);
+                background-size: 201% 100%;
+                background-position: 100% 0;
+                transition: background-position .8s linear;
+            }
+    
+        }
+        
+    }
+    .contenedorPictureContacto{
+        flex: 1;
+        width: 100%;
+        height: auto;
+        max-height: 40rem;
+        aspect-ratio: 9/10;
+        @include m.desktop{
+            width: 40rem;
+            
+           
+        }
+        position: relative;
+        overflow: hidden;
+        .picturesContacto{
+            
+            &:hover img{
+                scale: 1.05;
+                cursor: pointer;
+                transition: scale .5s ;
+            }
+            img{
+                position: absolute;
+              
+                width: 100%; 
+                height: 100%;
+                object-fit: cover;
+                object-position: left;
+
+                transition: scale .5s ;
+            }
+        }
+    }
+ 
+
+}
+.iconosInfo{
+    width: 100%;
+    height: 10rem;
+    ul{
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        
+        li{
+            height: 8rem;
+            width: 8rem;
+            border-radius: 2rem;
+            overflow: hidden;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+   
+}

@@ -1,0 +1,117 @@
+
+@use 'variables' as v;
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: v.$fuente_principal;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: white;
+    
+    overflow: hidden;
+    
+    min-width: 100%;
+    min-height: 100%;
+}
+p {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: v.$fuente_principal;
+    margin: 0;
+    font-weight: 300;
+    text-align: center;
+
+    
+}
+ul, li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.6rem;
+}
+
+.html{
+    background-image: url(../img/html.png);
+    .no-webp{
+        background-image: url(../img/html.webp);
+    }
+}
+.css{
+    background-image: url(../img/css.png);
+    .no-webp{
+        background-image: url(../img/css.webp);
+    }
+}
+.sass{
+    background-image: url(../img/sass.png);
+    .no-webp{
+        background-image: url(../img/sass.webp);
+    }
+}
+.git{
+    background-image: url(../img/git.png);
+    .no-webp{
+        background-image: url(../img/git.webp);
+    }
+}
+.php{
+    background-image: url(../img/php.png);
+    .no-webp{
+        background-image: url(../img/php.webp);
+    }
+}
+.js{
+    background-image: url(../img/js.png);
+    .no-webp{
+        background-image: url(../img/js.webp);
+    }
+}
+.separador{
+    
+    color: v.$blanco;
+    width: 100%;
+    margin: 4rem 0rem;
+}

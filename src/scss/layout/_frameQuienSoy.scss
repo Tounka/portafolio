@@ -1,0 +1,181 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.framePrincipal2{
+    overflow-y: auto;
+
+    align-items: start;
+    gap: 2rem;
+}
+.contenedorQuienSoy{
+    
+    height: inherit;
+    max-height: 95%;
+    
+    @include m.tablet{
+        display: flex;
+        justify-content: center;
+        align-items: start; 
+        
+    }
+    @include m.desktop{
+        height: inherit;
+        max-height: 95%;
+    }
+
+    h2, h3{
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 1rem 0;
+        line-height: 3.5rem;
+
+        @include m.desktop{
+            font-size: 2.8rem;
+            text-align: left; 
+        }
+        @include m.tablet{
+            
+            margin: 0;
+        }
+    }
+
+    p{
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 3rem;
+        @include m.desktop{
+            font-size: 2rem;
+            line-height: 3.5rem;
+        }
+    }
+    .contenedorQuienSoy_textos{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+     
+
+        @include m.tablet{
+            justify-content: space-between;
+        
+        }
+        @include m.tablet{
+            width: calc(70% - 2rem);
+            height: 100%;
+            width: 100%;
+        }
+
+        .contenedorNombreQuienSoy{
+            
+            @include m.desktop{
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                
+            }
+            .contenedorQuienSoy_textos_nombre{
+                text-align: center;
+                
+                h2{
+                    padding: 1rem;
+                    
+                    font-size: 2.5rem;
+                    display: inline-block;
+                    background-image: linear-gradient(to left, v.$amarillo 0%, v.$amarillo 50%, v.$verde 50%, v.$verde 100%);
+                    background-size: 201% 100%;
+                    background-position: 100% 0;
+                    margin-bottom: 2rem;
+                    transition: background-position .5s linear;
+                    
+                    @include m.desktop{
+                        font-size: 4rem;
+                        line-height: 5rem;
+                    }
+                    &:hover{
+                        background-position: 0% 0; /* Al hacer hover, el fondo se desplaza completamente a la derecha */
+                        transition: background-position .5s;
+                        cursor: pointer;
+                    }
+                    @include m.desktop{
+                        background: transparent;
+                        
+                        &:hover .nombreQuienSoy{
+                            background-position: 0% 0; /* Al hacer hover, el fondo se desplaza completamente a la derecha */
+                            transition: background-position .5s;
+                            cursor: pointer;
+                        }
+                    }
+                
+                }
+                .nombreQuienSoy{
+                    margin: 0 1rem;
+                      background-color: transparent;
+                    @include m.desktop{
+                        margin: 0;
+                        display: inline-block;
+                        background-image: linear-gradient(to left, v.$amarillo 0%, v.$amarillo 50%, v.$verde 50%, v.$verde 100%);
+                        background-size: 201% 100%;
+                        background-position: 100% 0;
+    
+                        transition: background-position .5s linear;
+                    }
+             
+                }
+          
+            }
+        }
+
+        .contenedorBtnRegresar{
+             display: flex;
+             justify-content: center;
+             margin: 2rem 0;
+             @include m.tablet{
+                margin-bottom: 2rem;
+             }
+
+        }
+
+    }
+ 
+    .contenedorRetrato{
+        width: 100%;
+        height: 24rem;
+
+        @include m.tablet{
+            width:40%;
+            height: 100%;
+
+            max-height: 100%;
+            margin-right: 2rem;
+        }
+        overflow: hidden;
+        a{
+            height: 100%;
+            .imgRetrato{
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                background-image: url(build/img/imgRamon.webp);
+                
+                background-size: cover;
+                background-position-y: 20%;
+                transition: transform .3s;
+
+                @include m.tablet{
+                    background-position: center;
+                }
+                &:hover{
+                    transform: scale(1.05);
+                    
+                    transition: transform .3s;
+                }
+            }
+        }
+     
+    }
+
+
+}
+
+

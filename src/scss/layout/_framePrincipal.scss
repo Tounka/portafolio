@@ -1,0 +1,108 @@
+@use '../base/mixins' as m;
+
+.framePrincipal{
+    
+    background-image: url(../img/imgBgPrincipal.png);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+
+
+    ul,li{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        overflow: hidden;
+        
+    }
+    
+
+    li{
+        width: 50%;
+        height: 50%;
+        transition: background .3s ;
+        &:hover{
+            background: #000;
+            cursor: pointer;
+            transition: background .3s ;
+        }
+
+        h3{
+            color: white;
+            transform: rotate(-45deg);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    }
+    
+    
+
+
+    .framePrincipal_menu{
+        width: 25rem;
+        height: 25rem;
+        h3{
+            font-size: 2rem;   
+        }
+        @include m.tablet{
+            width: 38rem;
+            height: 38rem;
+            h3{
+                font-size: 3rem;
+            }
+        }
+        margin-top: 8rem;
+        backdrop-filter: blur(40px);
+        overflow: hidden;
+        transform: rotate(45deg);
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background-color: white;
+            transform: translateX(-50%);
+            z-index: 101;
+        }
+        
+        /* Línea horizontal */
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transform: translateY(-50%);
+            z-index: 100;
+        }
+   
+    }
+
+    .framePrincipal_titular{
+        p{
+            margin-bottom: 2rem;
+            font-weight: 400;
+            margin: 1rem;
+        }
+        h1{
+            font-weight: 700;
+        }
+    }
+}

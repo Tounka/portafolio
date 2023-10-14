@@ -1,0 +1,118 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+.framePortafolio{
+    overflow-y: auto;
+    background-color: v.$negro;
+    
+    .contenedorSuperiorPortafolio{
+   
+        
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        background-color: blue;
+
+        a{
+            
+            picture{
+                width: 100%;
+                height: 100%;
+                
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+    }
+
+    .contenedorInferiorPortafolio{
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+        @include m.tablet{
+            height: 50rem;
+            flex-direction: row;
+            align-items: initial;
+        }
+        
+        .pictureImgDesktop{
+            flex: 3;
+      
+            a{
+                width: 50%;
+                height: auto;
+                aspect-ratio: 9/16;
+                height: 100%;
+                picture{
+                
+                    width: 100%;
+                    height: 100%;
+                    
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+        }
+        .contenedorTextoPortafolio{
+            flex: 7;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            
+            h4{
+                margin: 0;
+            }
+            p{
+                text-align: center;
+            }
+            ul{
+                width: 100%;
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                padding: 0;
+                gap: .5rem;
+                li{
+                    display: flex;
+                    
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+                    padding: 0;
+
+                    background-size: cover;
+                    border: solid .5rem v.$blanco;
+                    height: 5rem;
+                    width: 5rem;
+                    background-color:  v.$blanco;
+                    border-radius: 5%;
+                }
+            }
+        }
+    }
+}
+
+
+.framePortafolio{
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .contenedorBtnRegresar{
+        width: 100%;
+        .btnRegresar{
+            width: 100%;
+        }
+    }
+}

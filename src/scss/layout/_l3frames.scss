@@ -1,0 +1,19 @@
+@use '../base/variables' as v;
+.contenedor3Frames{
+    display: flex;
+    
+    width: 300vw;
+
+
+}
+
+.framePrincipal2{
+    
+    background: v.$color-fondo;
+    
+    
+}
+.framePrincipal3{
+    
+    background: v.$color-fondo;
+}
