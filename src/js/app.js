@@ -13,7 +13,15 @@ function desplazamientoDeFrame(){
 
     btnRegresar.forEach(function(btnRegresar) {
         btnRegresar.addEventListener('click', function() {
+
             framePrincipal.scrollIntoView({ behavior: 'smooth' });
+            
+            setTimeout(() => {
+                contenedorContacto.classList.add('noVisible');
+                framePrincipal.scrollIntoView({ behavior: 'smooth' });
+            },700);
+            
+
         });
      });
      
@@ -25,11 +33,17 @@ function desplazamientoDeFrame(){
     });
     btnIrSobreMi.addEventListener('click', function() {
         framePrincipal2.scrollIntoView({ behavior: 'smooth' });
+   
     });
     btnIrContacto.addEventListener('click', function() {
         contacto.removeAttribute('hidden');
         framePrincipal.scrollIntoView();
         framePrincipal4.scrollIntoView({ behavior: 'smooth' });
+
+        contenedorContacto.classList.remove('noVisible'); 
+        setTimeout(() => {
+            contenedorContacto.classList.remove('noVisible'); 
+        }, 700);
         
     });
 
@@ -40,9 +54,9 @@ function sobreMi(){
     btnSobreMi.addEventListener("click", function(){
         
         sobreMiElement.removeAttribute('hidden');
-        
-        framePrincipal.scrollIntoView();
 
+        framePrincipal.scrollIntoView();
+        
         framePortafolio.style.marginLeft = "100vw";
         frameContacto.style.marginLeft = "100vw";
 

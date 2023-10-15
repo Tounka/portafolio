@@ -8,6 +8,9 @@ const btnPortafolio = document.querySelector('.opcPortafolio');
 const framePortafolio = document.querySelector('.framePortafolio');
 const frameContacto = document.querySelector('.frameContacto');
 
+const contactoLayout = document.getElementById('contenedorContacto'); 
+
+
 const contacto = document.getElementById('contacto');
 const sobreMiElement = document.getElementById('sobreMi');
 const btnSobreMi = document.getElementById('btnSobreMi');

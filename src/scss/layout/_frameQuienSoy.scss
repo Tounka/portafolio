@@ -179,9 +179,15 @@
 
 
 }
-.contenedorQuienSoy_textos_queMeGusta, .contenedorQuienSoy_textos_porqueMeGusta{
+.contenedorQuienSoy_textos_queMeGusta{
     display: none;
     @include m.desktop{
+        display: inline;
+    }
+}
+.contenedorQuienSoy_textos_porqueMeGusta{
+    display: none;
+    @include m.tablet{
         display: inline;
     }
 }
