@@ -11,9 +11,9 @@ function Pagina(titulo, descripcion, tecnologias, url,imgGrande, imgPeque) {
   }
 
   
-  const paginaPomo = new Pagina("Pomo-Pomodoro", "Es el clásico reloj Pomodoro para mejorar la productividad, pero esta vez con música de tus artistas favoritos :D (solo 3, que tampoco soy una API...).  ", ["html", "css", "sass", "js", "git"], "build/sinDevOps/KanyePomodoro/index.html", "build/img/imgPaginasD/paginaKanye/grande", "build/img/imgPaginasD/paginaKanye/peque");
-  const paginaGravity = new Pagina("Gravity Falls Fan", "Es una versión hecha por mí mismo de la página oficial de Disney de la serie.", ["html", "css", "sass", "js", "git"], "build/sinDevOps/GravityFalls/index.html", "build/img/imgPaginasD/paginaGravityFalls/grande", "build/img/imgPaginasD/paginaGravityFalls/peque");
-  const paginaPaseos = new Pagina("Paseos Castillo", "Se trata de una página web para la promoción de paseos hipotéticos. Fue mi primer proyecto, en esta página utilicé muchos elementos visuales generados por inteligencia artificial.", ["html", "css", "js"], "build/sinDevOps/PaginaCaminionV2/index.html", "build/img/imgPaginasD/paginaPaseos/grande", "build/img/imgPaginasD/paginaPaseos/peque");
+  const paginaPomo = new Pagina("Pomo-Pomodoro", "Es el clásico reloj Pomodoro para mejorar la productividad, pero esta vez con música de tus artistas favoritos :D (solo 3, que tampoco soy una API...).  ", ["html", "css", "sass", "js", "git"], "https://pomo-pomodoro.netlify.app/", "build/img/imgPaginasD/paginaKanye/grande", "build/img/imgPaginasD/paginaKanye/peque");
+  const paginaGravity = new Pagina("Gravity Falls Fan", "Es una versión hecha por mí mismo de la página oficial de Disney de la serie.", ["html", "css", "sass", "js", "git"], "https://gravity-falls-fanpage-p3.netlify.app/", "build/img/imgPaginasD/paginaGravityFalls/grande", "build/img/imgPaginasD/paginaGravityFalls/peque");
+  const paginaPaseos = new Pagina("Paseos Castillo", "Se trata de una página web para la promoción de paseos hipotéticos. Fue mi primer proyecto, en esta página utilicé muchos elementos visuales generados por inteligencia artificial.", ["html", "css", "js"], "https://buscatupaseo.netlify.app/", "build/img/imgPaginasD/paginaPaseos/grande", "build/img/imgPaginasD/paginaPaseos/peque");
 
 
 
