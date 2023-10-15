@@ -3,7 +3,7 @@
 
 .framePrincipal2{
     overflow-y: auto;
-
+   
     align-items: start;
     gap: 2rem;
 }
@@ -49,7 +49,7 @@
         }
     }
     .contenedorQuienSoy_textos{
-        
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -130,8 +130,10 @@
              display: flex;
              justify-content: center;
              margin: 2rem 0;
+             margin-bottom: 4rem;
+         
              @include m.tablet{
-                margin-bottom: 2rem;
+                margin-bottom: 2;
              }
 
         }
@@ -176,6 +178,12 @@
     }
 
 
+}
+.contenedorQuienSoy_textos_queMeGusta, .contenedorQuienSoy_textos_porqueMeGusta{
+    display: none;
+    @include m.desktop{
+        display: inline;
+    }
 }
 
 

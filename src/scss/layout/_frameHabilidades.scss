@@ -15,7 +15,10 @@
         flex-direction: row;
         overflow-y: hidden;
     }
-    background: brown;
+    @include m.tablet{
+        background: brown;
+    }
+    
     .contenedorHabilidadesIzquierdo{
         flex: 2;
         background-color: v.$blanco;
@@ -42,9 +45,9 @@
            
             }
             p{
-                font-size: 2.5rem;
+                font-size: 2.3rem;
                 @include m.tablet{
-                    font-size: 2.8rem;
+                    font-size: 2.5rem;
                 }
                 @include m.desktop{
                     font-size: 3rem;

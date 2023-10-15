@@ -1,7 +1,13 @@
+@use '../base/mixins' as m;
 .frame{
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow: auto;
+    
+    @include m.desktop{
+        overflow: hidden;    
+    }
     padding: 3rem;
+
     
 }
