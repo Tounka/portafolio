@@ -90,7 +90,10 @@
                     margin: 0;
                     padding: 0;
 
-                    background-size: cover;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
                     border: solid .5rem v.$blanco;
                     height: 5rem;
                     width: 5rem;

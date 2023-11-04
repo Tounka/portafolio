@@ -15,11 +15,11 @@ function Pagina(titulo, descripcion, tecnologias, url,imgGrande, imgPeque) {
   const paginaGravity = new Pagina("Gravity Falls Fan", "Es una versión hecha por mí mismo de la página oficial de Disney de la serie.", ["html", "css", "sass", "js", "git"], "https://gravity-falls-fanpage-p3.netlify.app/", "build/img/imgPaginasD/paginaGravityFalls/grande", "build/img/imgPaginasD/paginaGravityFalls/peque");
   const paginaPortafolio = new Pagina("Portafolio", "Se trata de mi portafolio personal. Espero que te guste. :D Existen dos versiones, una hecha con PHP y otra con JavaScript (la que ves aquí es la hecha con JS). Netlify no soporta PHP, por lo que tuve que desarrollar la segunda.  Puedes ver las distintas versiones aquí. :D  ", ["html", "css", "sass", "js", "git", "php"], "https://github.com/Tounka/portafolio", "build/img/imgPaginasD/paginaPortafolio/grande", "build/img/imgPaginasD/paginaPortafolio/peque");
   const paginaPaseos = new Pagina("Paseos Castillo", "Se trata de una página web para la promoción de paseos hipotéticos. Fue mi primer proyecto, en esta página utilicé muchos elementos visuales generados por inteligencia artificial.", ["html", "css", "js"], "https://buscatupaseo.netlify.app/", "build/img/imgPaginasD/paginaPaseos/grande", "build/img/imgPaginasD/paginaPaseos/peque");
+  const paginaSolar = new Pagina("SolarWeb", "Se trata de una pagina web enfocada a la verificar la factibilidad de la compra de paneles solares, en esta pagina aprendí el uso de bootstrap.", ["html", "css", "sass", "js", "git", "bootstrap"], "https://solarong.netlify.app/", "build/img/imgPaginasD/paginaSolar/grande", "build/img/imgPaginasD/paginaSolar/peque");
 
 
 
-
-const arregloDePaginas = [paginaPomo, paginaGravity,paginaPortafolio, paginaPaseos];
+const arregloDePaginas = [paginaSolar, paginaPomo, paginaGravity,paginaPortafolio, paginaPaseos];
 arregloDePaginas.forEach(function (pagina) {
   const contenedorSuperior = document.createElement('div');
   contenedorSuperior.classList.add('contenedorSuperiorPortafolio');
